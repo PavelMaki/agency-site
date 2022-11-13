@@ -134,15 +134,15 @@
 }
 
 .intro__heading {
-font-family: 'Open Sans';
-font-size: 60px;
-line-height: 72px;
-font-weight: 800;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-margin: 0;
-margin-bottom: 19px;
-margin-top: -15px;
+    font-family: 'Open Sans';
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 19px;
+    margin-top: -15px;
 }
 
 .intro__span_special {
