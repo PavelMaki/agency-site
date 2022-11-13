@@ -53,7 +53,8 @@
 
 .page__inner {
     display: block;
-    width: 100%;    
+    width: 100%;
+    background-color: #F6F2F2;       
 }
 
 .page__inner_intro {
@@ -111,7 +112,7 @@
     color: #E0E0E0;
 }
 
-.menu-link:hover {
+.site-menu__item:hover {
     background-color: #FF3F40;
 }
 
@@ -175,8 +176,7 @@ margin-top: -15px;
 
 .action-link_red-full {
     color: #fff;
-    background-color: #FF2D2D;
-    
+    background-color: #FF2D2D;    
 }
 
 .intro__video {
