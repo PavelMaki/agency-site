@@ -88,7 +88,7 @@ button {
 .header {
     display: flex;
     justify-content: center;
-    width: 1249px;
+    max-width: 1249px;
     min-height: 89px;     
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -97,12 +97,24 @@ button {
     margin-left: -30 px;
 }
 
+@media screen and (max-width: 600px) {
+    .site-menu {
+        margin-left: initial;
+    }
+}
+
 .site-menu__list {
     display: flex;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+@media screen and (max-width: 600px) {
+    .site-menu__list {
+        justify-content: center;        
+    }
 }
 
 .site-menu__item {
@@ -135,19 +147,40 @@ button {
 /* intro */
 .intro {
     display: flex;
-    width: 1249px;
+    flex-wrap: wrap;
+    max-width: 1249px;
     margin: 0 auto;
     justify-content: space-between;
 }
+
+@media screen and (min-width: 800px) and (max-width: 1249px) {
+    .intro {
+        flex-wrap: nowrap;
+    }
+ }   
 
 .intro__info {
     max-width: 595px;
 }
 
+@media screen and (max-width: 1240px) {
+    .intro__info {
+        width: 50%;
+        margin-right: initial;
+    }
+ }   
+
+ @media screen and (max-width: 800px) {
+    .intro__info {
+        width: 100%;
+        margin-bottom: 80px;
+    }
+ }   
+
 .intro__heading {
     font-family: 'Open Sans', sans-serif; 
     font-size: 60px;
-    line-height: 72px;
+    line-height: 1.2;
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -158,6 +191,8 @@ button {
 
 .intro__span_special {
     letter-spacing: 6px;
+    overflow-wrap: break-word;
+    hyphens: auto;
 } 
 
 .intro__text {
@@ -203,10 +238,22 @@ button {
     box-shadow: -2.2px -13.8px 73px rgba(0, 0, 0, 0.29);
 }
 
+@media screen and (max-width: 1240px) {
+    .intro__video {
+        width: 50%;
+    }
+ }   
+
+ @media screen and (max-width: 800px) {
+    .intro__video {
+        width: 100%;
+    }
+ }   
+
 /* services */
 .services {
     display: flex;
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 107px 0 90px;
     border-bottom: 2px solid #ECECEC;
@@ -307,7 +354,7 @@ button {
 
 /* features */
 .feature {
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 105px 0 65px;
 }
@@ -395,7 +442,7 @@ button {
 
 /* Team */
 .team {
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 65px 0 53px;
 }
@@ -560,7 +607,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 150px 0 140px;
 }
@@ -572,16 +619,19 @@ button {
     font-weight: 700;
     line-height: 1.1;
     margin: 0;
-    margin-bottom: 17px;
+    margin-bottom: 13px;
+    letter-spacing: 1.15px;
 }
 
 .subscribe__about {
     color: #fff;
-    font-family: 'OpenSans';
+    font-family: 'Open Sans', sans-serif; 
     font-size: 15.9953px;
     line-height: 28px;
     margin: 0;
     margin-bottom: 59px;
+    margin-left: 2px;
+    letter-spacing: 0.05px;
 }
 
 .subscribe__form {
@@ -601,7 +651,7 @@ button {
 
 .subscribe__button {
     color: #fff;
-    font-family: 'OpenSans';
+    font-family: 'Open Sans';
     font-size: 17.9026px;
     line-height: 34px;
     font-weight: 700;
@@ -618,7 +668,7 @@ button {
 
 /* Get in touch */
 .feedback {
-    width: 1249px;
+    max-width: 1249px;
     margin: 0 auto;
     padding: 107px 0;
 }
@@ -778,7 +828,7 @@ button {
 }
 
 .footer {
-    width: 1249px;
+    max-width: 1249px;
     min-height: 111px;
     margin: 0 auto;
     display: flex;
