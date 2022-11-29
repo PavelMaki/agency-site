@@ -62,6 +62,7 @@ button {
 .page__inner {
     display: block;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .page__inner_intro {
@@ -753,6 +754,13 @@ button {
     grid-template-rows: auto;
 }
 
+@media (max-width: 1010px) {
+    .feedback__body {
+        padding: 0 1vw;
+    }
+}
+
+    
 .feedback__body::after {
     content: '';
     /* flex: 1 1 auto; */
