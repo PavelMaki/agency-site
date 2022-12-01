@@ -10,6 +10,13 @@
     <title>Agency Landing</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <script defer src="js/popup-menu.js"></script>
 </head>
 <body class="page">
@@ -153,9 +160,11 @@
         </section>
         <div class="page__inner page__inner_subscribe page__inner_dark">
             <section class="subscribe">
-                <h2 class="subscribe__heading">Design tips, tricks, and freebies. Delivered weekly.</h2>
-                <p class="subscribe__about">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod.</p>
-                <form class="subscribe__form" action="" method="get">
+                <div class="subscribe__header">
+                    <h2 class="subscribe__heading">Design tips, tricks, and freebies. Delivered weekly.</h2>
+                    <p class="subscribe__about">Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod.</p>
+                </div>
+                <form class="subscribe__form" action="#" method="get">
                     <input class="subscribe__email" type="email" name="email" id="subscribe__email" placeholder="Email Address...">
                     <button class="subscribe__button" type="submit">subscribe</button>
                 </form>
@@ -173,7 +182,7 @@
                 <form class="feedback__form" method="get">
                     <input class="feedback__name" type="text" placeholder="Name" name="Name">       
                     <input class="feedback__email" type="email" placeholder="Your Mail" name="email" id="email">  
-                    <textarea class="feedback__textarea" placeholder="Type your message" name="textarea" id="" cols="30" rows="10"></textarea>      
+                    <textarea class="feedback__textarea" placeholder="Type your message" name="textarea" cols="30" rows="10"></textarea>      
                     <button class="feedback__button" type="submit">Send message</button>
                 </form>
                 <section class="feedback__contacts contacts">

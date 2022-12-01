@@ -36,11 +36,11 @@
   
     @font-face {
     font-family: 'Open Sans'; 
-    font-style: italic;
+    font-style: normal;
     font-weight: 800;
     src: local(''),
-         url('../fonts/open-sans-v34-latin-800italic.woff2') format('woff2'), 
-         url('../fonts/open-sans-v34-latin-800italic.woff') format('woff'); 
+         url('../fonts/open-sans-v34-latin-800.woff2') format('woff2'), 
+         url('../fonts/open-sans-v34-latin-800.woff') format('woff'); 
   }  
 
 :root {
@@ -87,7 +87,7 @@ button {
 .page__header {
     margin: 0 auto;
 }
-
+hoo
 .page__inner_subscribe {
      padding: 0 1vw;
 }
@@ -98,11 +98,20 @@ button {
 
 /* Header */
 .header {
+    width: 100%;
     display: flex;
     justify-content: center;
     max-width: 1249px;
     min-height: 89px;     
     background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+@media screen and (max-width: 800px) {
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+    }
 }
 
 .site-menu {
@@ -199,12 +208,15 @@ button {
 
 .popup-menu__item {
     display: flex;
+    width: 100%;
     min-height: 89px;
 }
 
 .popup-menu__link {
     display: flex;
+    width: 100%;
     align-items: center;
+    justify-content: center;
     padding: 0 30px;
     font-family: 'Open Sans', sans-serif; 
     font-size: 14px;
@@ -394,6 +406,7 @@ button {
     background-image: url(../img/icon19.svg); 
     background-repeat: no-repeat;
     margin-bottom: 34px;
+    padding-bottom: 2px;
 }
 
 .services__item_icon_design::before {
@@ -468,7 +481,8 @@ button {
 }
 
 .feature__about {
-    width: 537px;
+    width: 100%;
+    max-width: 537px;
     margin: 0 auto;
     margin-bottom: 34.5px;
     font-family: 'Open Sans', sans-serif; 
@@ -492,11 +506,13 @@ button {
 }
 
 .filter__list {
+    width: 100%;
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 57px;
 }
 
@@ -612,7 +628,7 @@ button {
 }
 
 .team__lead-main {
-    width: 632px;
+    max-width: 632px;
     grid-column: 2 / 3;
     grid-row: 1 / 2;    
     align-self: center;    
@@ -633,7 +649,6 @@ button {
     font-size: 16px;
     margin: 0;
     margin-bottom: 46px;
-    /* line-height: 28px; */
 }
 
 .team__lead-social {
@@ -643,7 +658,7 @@ button {
     margin: 0;
     padding: 0;
     list-style: none;
-    }
+}
  
 .team__lead-link {
     color: #000;
@@ -730,6 +745,13 @@ button {
     padding: 150px 0 140px;
 }
  
+.subscribe__header {
+    display: block;
+    max-width: 1249px;
+    margin: 0 auto;
+    text-align: center;
+}
+
 .subscribe__heading {
     color: #fff;
     font-family: 'Open Sans', sans-serif; 
@@ -755,6 +777,8 @@ button {
 .subscribe__form {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap: 22px;
 }
 
@@ -765,6 +789,15 @@ button {
     border-radius: 5px;
     border: none;
     background-color: #fff;
+    font-family: 'Open Sans';
+    font-size: 16px;
+}
+
+@media screen and (max-width: 700px) { 
+    .subscribe__email {
+        width: 100%;
+        margin: 0 3vw;
+    }
 }
 
 .subscribe__button {
@@ -821,7 +854,6 @@ button {
 
 .feedback__body {
     display: flex;
-    /* justify-content: space-between; */
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: 1fr 731px minmax(auto,107px) 411px 1fr;
@@ -837,18 +869,9 @@ button {
     
 .feedback__body::after {
     content: '';
-    /* flex: 1 1 auto; */
     background-color: #2D2D2D;
     grid-column: 5 / 6;
 }
- 
-/* .feedback__box {
-    flex: 1 1 auto;
-}
-
-.feedback__box_right {
-    background-color: #2D2D2D;
-} */
 
 .feedback__form {
     width: 731px;
@@ -938,7 +961,6 @@ button {
 .contacts {
     width: 315px;
     padding: 141px 17px 141px 79px;
-
 }
 
 .contacts__heading {
@@ -948,7 +970,6 @@ button {
     font-weight: 700;
     margin: 0;
     margin-bottom: 31px;
-
 }
 
 .contacts__address {
@@ -978,7 +999,7 @@ button {
 
 @media screen and (max-width: 1248px) {
     .feedback__body {
-        grid-template-rows: 1fr auto 1fr;
+        grid-template-rows: auto;
         row-gap: 107px;
     }
     .feedback__body::after {
@@ -1001,8 +1022,7 @@ button {
     }     
     .feedback__button {
         width: 100%;        
-    }      
-    
+    }          
     .feedback__contacts {
         grid-column: 2 / 3;
     }
