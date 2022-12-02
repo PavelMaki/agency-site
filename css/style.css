@@ -363,6 +363,7 @@ hoo
 
 .services__info {
     width: 539px;
+    padding-bottom: 10px;
 }
 
 .services__heading {
@@ -574,7 +575,7 @@ hoo
 .team__about {
     font-family: 'Open Sans', sans-serif; 
     font-size: 16px;
-    width: 451px;
+    max-width: 451px;
     margin: 0;
     margin-bottom: 39px;
 }
@@ -734,6 +735,11 @@ hoo
     }
 }  
 
+@media screen and (max-width: 510px) {   
+    .team__lead-photo {
+        width: 100%;
+    }
+}  
 
 /* Subscribe */
 .subscribe {
@@ -821,7 +827,7 @@ hoo
 .feedback {
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 1vw;
+    /* padding: 0 1vw; */
     padding-top: 107px;
     padding-bottom: 107px;
 }
@@ -866,7 +872,7 @@ hoo
     }
 }
 
-    
+
 .feedback__body::after {
     content: '';
     background-color: #2D2D2D;
@@ -1000,7 +1006,11 @@ hoo
 @media screen and (max-width: 1248px) {
     .feedback__body {
         grid-template-rows: auto;
+        grid-template-columns: 1fr auto 1fr;
         row-gap: 107px;
+    }
+    .feedback__header {
+        padding: 0 1vw; 
     }
     .feedback__body::after {
         content: none;        
